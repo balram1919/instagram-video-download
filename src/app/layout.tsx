@@ -3,9 +3,6 @@ import { DM_Sans as FontSans } from "next/font/google";
 
 import "@/styles/globals.css";
 
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
-
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ReactQueryProvider } from "@/components/providers/react-query-provider";
 
@@ -41,11 +38,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ReactQueryProvider>
-            <Navbar />
             <main className="relative h-[calc(100vh-6rem)] overflow-y-auto px-2 sm:px-4">
               {children}
             </main>
-            <Footer />
           </ReactQueryProvider>
         </ThemeProvider>
       </body>
